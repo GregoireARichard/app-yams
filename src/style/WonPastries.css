@@ -1,0 +1,26 @@
+.won-pastry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .won-pastry-image {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .won-pastry-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .won-pastry-number {
+    font-size: 18px;
+    color: #6c5ce7;
+  }
+ 

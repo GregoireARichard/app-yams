@@ -1,0 +1,35 @@
+.winners-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .winners-table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  .winners-table-header {
+    background-color: #333;
+    color: white;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  .winners-table-row {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .winners-table-cell {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .winners-table-cell-winner {
+    font-weight: bold;
+  }
+  
