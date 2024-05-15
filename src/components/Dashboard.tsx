@@ -19,15 +19,22 @@ const Dashboard = () => {
   const email = useSelector((state: any) => state.auth.user.email);
 
   const handleClick = async () => {
+    const token = localStorage.getItem("YAMS:authToken");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BACK_ADDRESS}:${
-          import.meta.env.VITE_BACK_PORT
-        }/game/roll-dices`,
+        `${import.meta.env.VITE_BACK_ADDRESS}:${import.meta.env.VITE_BACK_PORT}/game/roll-dices`,
         {
           email: email,
-        }
+        },
+        config
       );
+    
 
       setData(response.data);
       setDiceValues(response.data.dice);
@@ -50,7 +57,9 @@ const Dashboard = () => {
 
       {!data && (
         <div className="upper-square">
-          <button onClick={handleClick} className="play-btn">Jouer</button>
+          <button onClick={handleClick} className="play-btn">
+            Jouer
+          </button>
         </div>
       )}
 
