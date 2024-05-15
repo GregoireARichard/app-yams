@@ -1,97 +1,123 @@
 .upper-square {
-    background-color: #f2f2f2;
-    margin: 0 auto; 
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  .square {
-    background-color: #f2f2f2;
-    margin: 0 auto; 
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .square h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .square p {
-    margin: 0;
-    text-align: center;
-  }
-  
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.square {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.square h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.square p {
+  margin: 0;
+  text-align: center;
+}
+
 
 .dice {
-    animation: roll 1s ease-in-out forwards;
-    transform-style: preserve-3d;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-  }
-  
-  @keyframes roll {
-    0% {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-    50% {
-      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-    }
-    100% {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-  }
-  
-  .dice-face {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    background-color: #6c5ce7;
-    border-radius: 6px
+  animation: roll 1s ease-in-out forwards;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
 }
+
+@keyframes roll {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+.dice-face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #6c5ce7;
+  border-radius: 6px
+}
+
 .dice-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 200px;
-  }
-  .rejouer-btn {
-    background-color: #6c5ce7;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .rejouer-btn:hover {
-    background-color: #5a4fcf;
-  }
-  
-  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+}
+
+.rejouer-btn {
+  background-color: #6c5ce7;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rejouer-btn:hover {
+  background-color: #5a4fcf;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.leaderboard-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  /* Add margin top */
+}
+
+.leaderboard-btn:hover {
+  background-color: #444;
+}

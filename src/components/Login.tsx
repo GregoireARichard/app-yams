@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import axios from "axios"
-import "../style/login.css"
-import toast, { Toaster } from 'react-hot-toast'
+import React, { useState } from "react";
+import axios from "axios";
+import "../style/login.css";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 interface LoginProps {
@@ -9,31 +9,34 @@ interface LoginProps {
 }
 
 const Login: React.FC<LoginProps> = ({ onLogin }) => {
-  const [usermail, setUsermail] = useState("")
-  const [password, setPassword] = useState("")
+  const [usermail, setUsermail] = useState("");
+  const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-    
+
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BACK_ADDRESS}:${import.meta.env.VITE_BACK_PORT}/auth/signin`, {
-        email: usermail,
-        password: password,
-      })
+        `${import.meta.env.VITE_BACK_ADDRESS}:${
+          import.meta.env.VITE_BACK_PORT
+        }/auth/signin`,
+        {
+          email: usermail,
+          password: password,
+        }
+      );
 
-      const token = response.data.jwt
+      const token = response.data.jwt;
 
-      onLogin(token)
-      toast.success("Connecté !")
-      navigate('/dashboard')
-      
+      onLogin(token);
+      toast.success("Connecté !");
+      navigate("/dashboard");
     } catch (error) {
-      console.log(error)
-      toast.error("Mot de passe ou adresse email incorrect")
+      console.log(error);
+      toast.error("Mot de passe ou adresse email incorrect");
     }
-  }
+  };
 
   return (
     <div className="login-container">
@@ -68,7 +71,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
