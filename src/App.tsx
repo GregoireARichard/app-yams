@@ -36,7 +36,7 @@ const App: React.FC = () => {
         <Route
           path="/login"
           element={
-            isAuthenticated ? <Dashboard /> : <Login onLogin={handleLogin} />
+             <Login onLogin={handleLogin} />
           }
         />
         <Route

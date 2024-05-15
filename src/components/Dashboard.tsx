@@ -50,7 +50,7 @@ const Dashboard = () => {
 
       {!data && (
         <div className="upper-square">
-          <button onClick={handleClick}>Play</button>
+          <button onClick={handleClick} className="play-btn">Jouer</button>
         </div>
       )}
 

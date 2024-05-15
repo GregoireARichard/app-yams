@@ -12,6 +12,20 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+.play-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #444;
+}
 
 .square {
   background-color: #f2f2f2;
@@ -72,7 +86,7 @@
   font-size: 24px;
   font-weight: bold;
   color: white;
-  background-color: #6c5ce7;
+  background-color: #333;
   border-radius: 6px
 }
 
@@ -84,7 +98,7 @@
 }
 
 .rejouer-btn {
-  background-color: #6c5ce7;
+  background-color: #333;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -96,7 +110,7 @@
 }
 
 .rejouer-btn:hover {
-  background-color: #5a4fcf;
+  background-color: #333;
 }
 
 
