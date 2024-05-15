@@ -6,6 +6,7 @@ import '../style/winners.css'
 interface Winner {
   prizesWon: number;
   email: string;
+  wonAt: Date;
 }
 
 const Winners: React.FC = () => {
@@ -31,8 +32,9 @@ const Winners: React.FC = () => {
     <table className="winners-table">
       <thead>
         <tr>
-          <th className="winners-table-header">Winner</th>
-          <th className="winners-table-header">Prizes Won</th>
+          <th className="winners-table-header">Gagnant</th>
+          <th className="winners-table-header">Prix gagné(s)</th>
+          <th className="winners-table-header">Date</th>
         </tr>
       </thead>
       <tbody>
@@ -40,6 +42,7 @@ const Winners: React.FC = () => {
           <tr key={index} className="winners-table-row">
             <td className="winners-table-cell winners-table-cell-winner">{winner.email}</td>
             <td className="winners-table-cell">{winner.prizesWon}</td>
+            <td className="winners-table-cell">{new Date(winner.wonAt).toLocaleDateString()}</td>
           </tr>
         ))}
       </tbody>
