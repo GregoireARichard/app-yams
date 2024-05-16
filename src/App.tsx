@@ -41,7 +41,6 @@ const App: React.FC = () => {
         />
         <Route
           path="/dashboard"
-          // element={<Dashboard />}
           element={
             isAuthenticated ? <Dashboard /> : <Navigate to="/login" replace />
           }
